@@ -8,9 +8,9 @@ age=22
 
 echo "My Name is $name and my age is $age"
 
-name="Avisha"
+name="Avi"
 
-echo "Avisha is love"
+echo "$name"
 
 #Var to store the output of a command
 
