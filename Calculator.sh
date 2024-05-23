@@ -23,7 +23,8 @@ case $op in
 	m)
 		echo "Multiplication of the numbers is : $((num1*num2))";;
 	d)
-		echo "Division of the numbers is : $((num1/num2))";;
+		res=$(echo "scale=2;$num1/$num2" | bc)
+		echo "Division of the numbers is : $res";;
 	*)
 		echo "Invalid Operator!!"
 esac
@@ -31,4 +32,6 @@ esac
 
 }
 
-calculator 4 2 
+read -p "Enter first Operand : " num1
+read -p "Enter Second Operand : " num2
+calculator $num1 $num2
